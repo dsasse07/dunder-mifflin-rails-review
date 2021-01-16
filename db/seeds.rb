@@ -1,3 +1,4 @@
+require 'pry'
 Employee.destroy_all
 Dog.destroy_all
 
@@ -6,6 +7,7 @@ dogs = []
   new_dog = Dog.create(name: Faker::Dog.name, breed: Faker::Dog.breed, age: Faker::Dog.age)
   dogs << new_dog.id
 end
+# binding.pry
 
 puts "🐶 🐶 🐶 🐶 "
 Employee.create(first_name: "Jim", last_name: "Halpert", alias: "Big Tuna", title: "Regional Co-Manager", office: "Scranton", dog_id: dogs[2], img_url: "https://s-i.huffpost.com/gen/2028878/images/n-UPROXX-628x314.jpg")
@@ -18,4 +20,5 @@ Employee.create(first_name: "Pam", last_name: "Beesly", alias: "Beesly", title: 
 Employee.create(first_name: "Kelly", last_name: "Kapoor", alias: "none", title: "Customer Service Representative", office: "Scranton", dog_id: dogs[2], img_url: "https://vignette.wikia.nocookie.net/theoffice/images/6/69/Kelly_Kapoor.jpg/revision/latest/scale-to-width-down/700?cb=20170701090501")
 Employee.create(first_name: "Oscar", last_name: "Martinez", alias: "none", title: "Accountant", office: "Scranton", dog_id: dogs[4], img_url: "https://vignette.wikia.nocookie.net/theoffice/images/2/25/Oscar_Martinez.jpg/revision/latest/scale-to-width-down/700?cb=20170701085818")
 Employee.create(first_name: "Darryl", last_name: "Philbin", alias: "none", title: "Warehouse Assistant", office: "Scranton", dog_id: dogs[5], img_url: "https://vignette.wikia.nocookie.net/theoffice/images/4/49/2009DarrylCroppeed.PNG/revision/latest/scale-to-width-down/1000?cb=20170701085636")
+
 puts " 📜 📜 📜 📜 "

@@ -1,0 +1,16 @@
+<h2> Dunder Mifflin Employee List </h2>
+<hr>
+
+<ul>
+<% @employees.each do |employee| %>
+<li>
+<%= link_to employee.full_name, employee_path(employee)%> <%= button_to 'Fire', employee_path(employee), method: 'delete' %>
+<br>
+
+</li>
+<%end%>
+</ul>
+
+<%= button_to "Hire New Employee!", new_employee_path, method: 'get'%>
+
+

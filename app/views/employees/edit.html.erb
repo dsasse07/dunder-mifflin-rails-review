@@ -1,0 +1,7 @@
+<h2> Edit <%= @employee.full_name%>'s Page:</h2>
+
+<img src="<%=@employee.reload.img_url%>" alt="<%=@employee.full_name%>'s Picture">
+
+<%= render "form" %>
+
+<%= button_to "Back", employee_path(@employee), method: 'get'%>

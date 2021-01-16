@@ -1,0 +1,44 @@
+<div>
+<%= form_for @employee do |f|%>
+<table>
+  <tbody>
+    <tr>
+      <td><strong><%=f.label :img_url, "Profile Picture" %></strong></td>
+      <td><%=f.text_field :img_url %></td>
+      <td><%= flash[:messages][:img_url][0] unless flash[:messages].nil? || flash[:messages][:img_url].blank? %></td>
+    </tr>
+    <tr>
+      <td><strong><%=f.label :first_name %></strong></td>
+      <td><%=f.text_field :first_name %></td>
+      <td><%= flash[:messages][:first_name][0] unless flash[:messages].nil? || flash[:messages][:first_name].blank? %></td>
+    </tr>
+        <tr>
+      <td><strong><%=f.label :last_name %></strong></td>
+      <td><%=f.text_field :last_name %></td>
+      <td><%= flash[:messages][:last_name][0] unless flash[:messages].nil? || flash[:messages][:last_name].blank? %></td>
+    </tr>
+    <tr>
+      <td><strong><%=f.label :alias %></strong></td>
+      <td><%=f.text_field :alias %></td>
+      <td><%= flash[:messages][:alias][0] unless flash[:messages].nil? || flash[:messages][:alias].blank? %></td>
+    </tr>
+    <tr>
+      <td><strong><%=f.label :office %></strong></td>
+      <td><%=f.text_field :office %></td>
+      <td><%= flash[:messages][:office][0] unless flash[:messages].nil? || flash[:messages][:office].blank? %></td>
+    </tr>
+    <tr>
+      <td><strong><%=f.label :title %></strong></td>
+      <td><%=f.text_field :title %></td>
+      <td><%= flash[:messages][:title][0] unless flash[:messages].nil? || flash[:messages][:title].blank? %></td>
+    </tr>
+    <tr>
+      <td><strong><%=f.label :dog %></strong></td>
+      <td><%=f.collection_select :dog_id, Dog.all, :id, :name %></td>
+      <td><%= flash[:messages][:dog][0] unless flash[:messages].nil? || flash[:messages][:dog].blank? %></td>
+    </tr>
+  </tbody>
+</table>
+<%= f.submit %>
+<%end%>
+</div>
