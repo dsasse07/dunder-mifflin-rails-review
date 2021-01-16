@@ -60,13 +60,24 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    colorize (0.8.1)
     concurrent-ruby (1.1.5)
+    crack (0.4.5)
+      rexml
     crass (1.0.5)
+    diff-lcs (1.4.4)
     erubi (1.7.1)
     execjs (2.7.0)
     faker (1.8.7)
       i18n (>= 0.7)
+    faraday (1.3.0)
+      faraday-net_http (~> 1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday-net_http (1.0.1)
     ffi (1.11.1)
+    git (1.8.1)
+      rchardet (~> 1.8)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.0)
@@ -74,6 +85,49 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    learn-co (4.1.0)
+      learn-config (~> 1)
+      learn-generate (~> 1)
+      learn-hello (~> 1)
+      learn-open (~> 1)
+      learn-status (~> 1)
+      learn-submit (~> 1)
+      learn-test (~> 3.3.0)
+      learn_linter (~> 1)
+      netrc (>= 0.11.0)
+      thor (>= 0.19.1)
+    learn-config (1.0.77)
+      learn-web (>= 1.5.0)
+      netrc
+    learn-generate (1.0.16)
+    learn-hello (1.0.1)
+      learn-web (>= 1.4.1)
+      netrc
+    learn-open (1.2.28)
+      git
+      learn-web (>= 1.5.2)
+      netrc
+    learn-status (1.0.1)
+      colorize
+      learn-web (>= 1.2.0)
+      netrc
+    learn-submit (1.3.1)
+      git (~> 1.2)
+      learn-web (~> 1.5, >= 1.5.0)
+      netrc (~> 0)
+    learn-test (3.3.1)
+      colorize (~> 0.8.1)
+      crack (~> 0.4.3)
+      faraday (~> 1.0)
+      git (~> 1.7)
+      netrc (~> 0.11.0)
+      oj (~> 3.10)
+      rspec (~> 3.0)
+      zeitwerk (~> 2.4.0)
+    learn-web (1.5.5)
+      faraday (~> 1.0)
+      oj (~> 3.10)
+    learn_linter (1.7.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -88,9 +142,12 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    multipart-post (2.1.1)
+    netrc (0.11.0)
     nio4r (2.3.0)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    oj (3.11.0)
     public_suffix (3.0.2)
     puma (3.12.6)
     rack (2.2.3)
@@ -123,6 +180,22 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rchardet (1.8.0)
+    rexml (3.2.4)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.1)
+    ruby2_keywords (0.0.2)
     ruby_dep (1.5.0)
     rubyzip (1.3.0)
     sass (3.5.6)
@@ -172,6 +245,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.0.0)
       nokogiri (~> 1.8)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
@@ -182,6 +256,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   faker
   jbuilder (~> 2.5)
+  learn-co
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.12)
   rails (~> 5.1.5)
@@ -196,4 +271,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.1
+   2.2.4
