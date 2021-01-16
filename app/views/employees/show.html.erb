@@ -23,7 +23,7 @@
     </tr>
     <tr>
       <td><strong>Dog: </strong></td>
-      <td><%=@employee.dog.name%></td>
+      <td><%=link_to @employee.dogs_name, dog_path(@employee.dog)%></td>
     </tr>
   </tbody>
 </table>

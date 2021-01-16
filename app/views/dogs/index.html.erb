@@ -1,0 +1,20 @@
+<h2> Dunder Mifflin Dog List </h2>
+<hr>
+
+<ul>
+<% @dog_owners_array.each do |set| %>
+<li>
+<%= link_to   "#{set[0]} - Owners:  #{set[2]}", dog_path(set[1])%>
+<br>
+
+</li>
+<%end%>
+</ul>
+
+<%= button_to "Sort List by Number of Owners", sorted_dogs_path, method:'get'%>
+<%= button_to "Sort List by Alphabetically", dogs_path, method:'get'%>
+
+
+
+
+

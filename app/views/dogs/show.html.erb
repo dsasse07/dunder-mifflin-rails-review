@@ -1,0 +1,30 @@
+<h2> <%= @dog.name%>'s Page:</h2>
+
+
+<div>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Breed: </strong></td>
+      <td><%=@dog.breed%></td>
+    </tr>
+    <tr>
+      <td><strong>Age: </strong></td>
+      <td><%=@dog.age%></td>
+    </tr>
+    <tr>
+      <td><strong>Owners: </strong></td>
+      <td>
+        <ul>
+          <% @dog.owners.each do |owner| %>
+          <li><%= link_to owner.full_name, employee_path(owner)%></li>
+          <%end%>
+        </ul>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<%= button_to "Back", dogs_path, method: 'get'%>

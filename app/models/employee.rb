@@ -5,7 +5,7 @@ class Employee < ApplicationRecord
   validates :dog_id, presence: true
   validates :office, presence: true
   validate :https_url, if: :img_url
-  validates :alias, presence: true, uniqueness: true
+  validates :alias, uniqueness: true#, unless: Proc.new {|a| a.alias == "none"}
 
   def https_url
     unless !!self.img_url.match(/\bhttps:\/\/.*/) 
@@ -15,6 +15,10 @@ class Employee < ApplicationRecord
 
   def full_name
     self.first_name + " " + self.last_name
+  end
+
+  def dogs_name
+    self.dog.name
   end
 
 
